@@ -1,0 +1,103 @@
+// When color definition differs for dark and light variant
+// it gets @if ed depending on $variant
+
+$light: if($variant=='light', true, false);
+$base_color: if($variant == 'light', $window, $window_dark);
+$bg_color: if($variant == 'light', $button_face, $button_face_dark);
+$fg_color: if($variant == 'light', $window_text, $window_text_dark);
+$text_color: if($variant == 'light', $window_text, $window_text_dark);
+//
+$title_text_color: if($variant == 'light', $title_text, $title_text_dark);
+$selected_fg_color: if(lightness($title_text_color) > 50, #FFF, #000);
+$selected_bg_color: if($variant == 'light', $menu_hilight, $menu_hilight_dark);
+$borders_color: if($variant == 'light', $button_borders, $button_borders_dark);
+$window_borders_color: if($variant == 'light', $active_border, $active_border_dark);
+$backdrop_window_borders_color: if($variant == 'light', $inactive_border, $inactive_border_dark);
+$link_color: if($variant == 'light', $hot_tracking_color, $hot_tracking_color_dark);
+$link_visited_color: if($variant == 'light', darken($link_color, 20%), lighten($link_color, 10%));
+$borders_edge: if($variant == 'light', rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+$top_hilight: $borders_edge;
+$dark_fill: if($variant == 'light',darken($bg_color, 20%), lighten($bg_color, 20%));
+$menu_color: if($variant == 'light', $base_color, lighten($bg_color, 7%));
+$popover_bg_color: $bg_color;
+$popover_hover_color: if($variant=='light', darken($bg_color, 7%), lighten($bg_color, 7%));
+//
+$scrollbar_bg_color: if($variant == 'light', darken($scrollbar, 20%), lighten($scrollbar_dark, 20%));
+$scrollbar_slider_color: if($variant == 'light', transparentize($scrollbar_bg_color, 0.4), transparentize($scrollbar_bg_color, 0.4));
+$scrollbar_slider_hover_color: if($variant == 'light', darken($scrollbar, 20%), lighten($scrollbar_dark, 20%));
+$scrollbar_slider_active_color: if($variant=='light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 10%));
+//
+$button_bg_color: if($variant == 'light', lighten($bg_color, 6%), lighten($bg_color, 6%));
+$button_backdrop_bg_color: transparentize($button_bg_color, 0.3);
+$button_text_color: if($variant == 'light', $button_text, $button_text_dark);
+//
+$neutral_color: if($variant == 'light', $hilight, $hilight_dark);
+$focus_color: if($variant == 'light', $window_frame, $window_frame_dark);
+$highlight_text_color: if($variant == 'light', $hilight_text, $hilight_text_dark);
+$text_selection: if($variant == 'light',$neutral_color, $neutral_color);
+//
+$osd_fg_color: if($variant == 'light', $info_text, $info_text_dark);
+$osd_bg_color: if($variant == 'light', transparentize($info_window, 0.3), transparentize($info_window_dark, 0.3));
+$osd_button_bg_color: opacify($osd_bg_color, 1);
+$osd_borders_color: lighten(opacify($osd_bg_color, 1), 15%);
+$osd_text_color: transparentize($osd_fg_color, .1);
+$osd_insensitive_bg_color: transparentize(mix($osd_fg_color, opacify($osd_bg_color, 1), 10%), 0.5);
+$osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 50%);
+//
+$sidebar_bg_color: if($variant == 'light', $window, $window_dark);
+$base_hover_color: if($variant == 'light', transparentize($selected_bg_color, 0.85), transparentize($selected_bg_color, 0.65));
+$base_active_color: transparentize($fg_color, 0.80);
+//
+$tooltip_borders_color: if($variant == 'light', transparentize($window, 0.9), transparentize($window_dark, 0.9));
+$shadow_color: transparentize(black, 0.9);
+//insensitive state derived colors
+$insensitive_fg_color: if($variant == 'light', $gray_text, $gray_text_dark);
+$insensitive_bg_color: mix($bg_color, $base_color, 60%);
+$insensitive_dark_fill: mix($bg_color, $dark_fill);
+$insensitive_borders_color: transparentize($borders_color, 0.3);
+
+//colors for the backdrop state, derived from the main colors.
+$inactive_title_text_color: if($variant == 'light', $inactive_title_text, $inactive_title_text_dark);
+$backdrop_base_color: if($variant == 'light', darken($base_color, 5%), $base_color);
+$backdrop_text_color: transparentize($text_color, 0.2);
+$backdrop_bg_color: if($variant == 'light', darken($bg_color, 3%), lighten($bg_color, 2%));
+$backdrop_fg_color: mix($fg_color, $backdrop_bg_color, 50%);
+$backdrop_fg_color: if(lightness($inactive_title_text_color) > 50, lighten($backdrop_fg_color, 30%), $backdrop_fg_color);
+$backdrop_insensitive_color: if($variant == 'light', darken($backdrop_bg_color, 15%), lighten($backdrop_bg_color,15%));
+$backdrop_insensitive_dark_fill: $insensitive_dark_fill;
+$backdrop_selected_fg_color: if($variant == 'light', $backdrop_base_color, $backdrop_text_color);
+$backdrop_borders_color: if($variant == 'light', darken($borders_color, 3%), lighten($borders_color, 3%));
+$backdrop_dark_fill: if($variant == 'light', darken($dark_fill, 5%), $dark_fill);
+$backdrop_sidebar_bg_color: if($variant == 'light',darken($sidebar_bg_color, 3%), $sidebar_bg_color);
+
+$backdrop_scrollbar_bg_color: darken($backdrop_bg_color, 3%);
+$backdrop_scrollbar_slider_color: transparentize($backdrop_fg_color, 0.4);
+
+$backdrop_menu_color: if($variant == 'light', $backdrop_base_color, mix($backdrop_bg_color, $backdrop_base_color, 20%));
+
+// Headerbar widgets colors
+$headerbar_bg_color: if($variant == 'light', $active_title, $active_title_dark);
+$headerbar_text_color: $title_text_color;
+$headerbar_fg_color: $selected_fg_color;
+$headerbar_insensitive_color: mix($headerbar_fg_color, $headerbar_bg_color, 50%);
+//
+$backdrop_headerbar_bg_color: if($variant == 'light', $inactive_title, $inactive_title_dark);
+$backdrop_headerbar_text_color: $inactive_title_text_color;
+$backdrop_headerbar_fg_color: mix($headerbar_fg_color, $headerbar_bg_color, 70%);
+$backdrop_headerbar_insensitive_color: mix($headerbar_fg_color, $backdrop_headerbar_bg_color, 70%);
+//
+$hb_pathbar_bg: lighten($headerbar_bg_color, 5%);
+$hb_pathbar_bg_backdrop: mix(lighten($headerbar_bg_color, 5%), $headerbar_bg_color, 50%);
+$hb_pathbar_border_backdrop: darken($hb_pathbar_bg_backdrop, 2%);
+$hb_button_bg_hover: lighten($headerbar_bg_color, 10%);
+
+// Menubar widgets colors
+$menubar_bg_color: if($variant == 'light', $menu_bar, $menu_bar_dark);
+$menubar_hover_color: if($variant == 'light', $menu, $menu_dark);
+$menu_text_color: if($variant == 'light', $menu_text, $menu_text_dark);
+$backdrop_menubar_bg_color: $menubar_bg_color;
+$backdrop_menubar_text_color: mix($menu_text_color, $backdrop_headerbar_bg_color, 70%);
+
+// Terminal colors
+$terminal_base_color: lighten($terminal_bg_color, 5%);
+$terminal_borders_color: darken($terminal_bg_color, 10%);

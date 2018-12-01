@@ -1,0 +1,1160 @@
+// Main theme colors
+
+// don't change if statements, as some presets don't have these variables, but they have to be referenced.
+
+$active_title: #0078D7; //2B2929
+$gradient_active_title: if($theme_preset == 'default', #0078D7, null);
+$background: #004D80; //not implemented
+$menu_hilight: if($theme_preset == 'default', #0078D7, null); //orange in yaru
+$hilight: #0078D7;
+$hilight_text: #FFFFFF;
+$title_text: #FFFFFF;
+$window: #FFFFFF;
+$window_text: #000000;
+$scrollbar: #FFFFFF;
+$inactive_title: lighten($active_title, 7%);
+$gradient_inactive_title: if($theme_preset == 'default', lighten($active_title, 7%), null);
+$menu_bar: if($theme_preset == 'default', #E6E6E6, null);
+$menu: #0078D7;
+$window_frame: #0078D7;
+$menu_text: #000000;
+$active_border: #E6E6E6;
+$inactive_border: #E6E6E6;
+$app_workspace: #808080; //not implemented
+$button_face: #E6E6E6;
+$button_shadow: darken($button_face, 18%);
+$gray_text: mix(#E6E6E6, #000, 50%);
+$button_text: #000000;
+$inactive_title_text: mix($title_text, $inactive_title, 70%);
+$button_hilight: darken($button_face, 18%);
+$button_dk_shadow: darken($button_face, 18%);
+$button_light: darken($button_face, 18%);
+$info_text: #FFFFFF;
+$info_window: #1F1F1F;
+$hot_tracking_color: if($theme_preset == 'default', $hilight, null);
+
+
+// Terminal colors
+$terminal_bg_color: #000; //300A24
+$terminal_fg_color: white;
+
+// Utility
+$error_color: #E81123;
+$destructive_color: darken(#E81123, 10%);
+$warning_color: #FFB900;
+$success_color: #107C10;
+$drop_target_color: #107C10;
+$purple: #744DA9;
+
+// ******* THE LIGHT THEME PRESET CHANGES *******
+
+//Architecture
+
+@if $theme_preset == 'architec' {
+$active_title: rgb(104, 56, 0);
+$background: rgb(165, 165, 169);
+$hilight: rgb(184, 112, 0);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(192, 192, 192);
+$inactive_title: rgb(0, 72, 0);
+$menu: rgb(192, 192, 192);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(192, 192, 192);
+$inactive_border: rgb(192, 192, 192);
+$app_workspace: rgb(205, 162, 82);
+$button_face: rgb(192, 192, 192);
+$button_shadow: rgb(128, 128, 128);
+$gray_text: rgb(128, 128, 128);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(255, 255, 255);
+$button_hilight: rgb(255, 255, 255);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(224, 224, 224);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 225);
+$gradient_active_title: rgb(224, 160, 96);
+$gradient_inactive_title: rgb(136, 176, 144);
+}
+
+//Baseball
+
+@if $theme_preset == 'baseball' {
+$active_title: rgb(255, 0, 0);
+$background: rgb(138, 102, 79);
+$hilight: rgb(255, 0, 0);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(232, 208, 184);
+$inactive_title: rgb(160, 112, 56);
+$menu: rgb(208, 168, 112);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(208, 168, 112);
+$inactive_border: rgb(208, 168, 112);
+$app_workspace: rgb(159, 115, 53);
+$button_face: rgb(208, 168, 112);
+$button_shadow: rgb(160, 112, 56);
+$gray_text: rgb(160, 112, 56);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(208, 168, 112);
+$button_hilight: rgb(232, 208, 184);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(208, 168, 112);
+$info_text: rgb(128, 0, 0);
+$info_window: rgb(225, 224, 210);
+}
+
+//Bugs
+
+@if $theme_preset == 'bugs' {
+$active_title: rgb(0, 0, 0);
+$background: rgb(104, 120, 80);
+$hilight: rgb(0, 0, 0);
+$hilight_text: rgb(255, 128, 128);
+$title_text: rgb(255, 128, 128);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(208, 208, 192);
+$inactive_title: rgb(104, 120, 80);
+$menu: rgb(152, 168, 128);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(152, 168, 128);
+$inactive_border: rgb(152, 168, 128);
+$app_workspace: rgb(101, 116, 80);
+$button_face: rgb(152, 168, 128);
+$button_shadow: rgb(104, 120, 80);
+$gray_text: rgb(104, 120, 80);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(192, 192, 192);
+$button_hilight: rgb(208, 208, 192);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(152, 168, 128);
+$info_text: rgb(128, 0, 128);
+$info_window: rgb(255, 255, 255);
+}
+
+//CityScape
+
+@if $theme_preset == 'cityscap' {
+$active_title: rgb(0, 0, 152);
+$background: rgb(78, 80, 154);
+$hilight: rgb(88, 120, 240);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(192, 192, 192);
+$inactive_title: rgb(16, 0, 72);
+$menu: rgb(192, 192, 192);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(192, 192, 192);
+$inactive_border: rgb(192, 192, 192);
+$app_workspace: rgb(205, 162, 82);
+$button_face: rgb(192, 192, 192);
+$button_shadow: rgb(128, 128, 128);
+$gray_text: rgb(128, 128, 128);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(255, 255, 255);
+$button_hilight: rgb(255, 255, 255);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(224, 224, 224);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 225);
+$gradient_active_title: rgb(144, 168, 255);
+$gradient_inactive_title: rgb(152, 168, 216);
+}
+
+//Classic
+
+@if $theme_preset == 'classic' {
+$active_title: rgb(0, 0, 128);
+$background: rgb(0, 128, 128);
+$hilight: rgb(0, 0, 128);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(192, 192, 192);
+$inactive_title: rgb(128, 128, 128);
+$menu: rgb(192, 192, 192);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(192, 192, 192);
+$inactive_border: rgb(192, 192, 192);
+$app_workspace: rgb(128, 128, 128);
+$button_face: rgb(192, 192, 192);
+$button_shadow: rgb(128, 128, 128);
+$gray_text: rgb(128, 128, 128);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(192, 192, 192);
+$button_hilight: rgb(255, 255, 255);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(192, 192, 192);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 225);
+$gradient_active_title: rgb(0, 0, 128);
+$gradient_inactive_title: rgb(128, 128, 128);
+}
+
+//Dangerous Creatures
+
+@if $theme_preset == 'dngrcrts' {
+$active_title: rgb(0, 128, 128);
+$background: rgb(0, 0, 0);
+$hilight: rgb(0, 128, 128);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(184, 184, 184);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(184, 184, 184);
+$inactive_title: rgb(72, 72, 72);
+$menu: rgb(112, 112, 112);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(112, 112, 112);
+$inactive_border: rgb(112, 112, 112);
+$app_workspace: rgb(72, 72, 72);
+$button_face: rgb(112, 112, 112);
+$button_shadow: rgb(72, 72, 72);
+$gray_text: rgb(72, 72, 72);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(112, 112, 112);
+$button_hilight: rgb(184, 184, 184);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(112, 112, 112);
+$info_text: rgb(128, 0, 128);
+$info_window: rgb(255, 255, 255);
+}
+
+//Explorer
+
+@if $theme_preset == 'explorer' {
+$active_title: rgb(200, 167, 123);
+$background: rgb(0, 0, 0);
+$hilight: rgb(200, 167, 123);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(218, 210, 199);
+$inactive_title: rgb(129, 112, 86);
+$menu: rgb(180, 165, 143);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(180, 165, 143);
+$inactive_border: rgb(180, 165, 143);
+$app_workspace: rgb(129, 112, 86);
+$button_face: rgb(180, 165, 143);
+$button_shadow: rgb(129, 112, 86);
+$gray_text: rgb(129, 112, 86);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(0, 0, 0);
+$button_hilight: rgb(218, 210, 199);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(180, 165, 143);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 225);
+$gradient_active_title: rgb(122, 106, 95);
+$gradient_inactive_title: rgb(82, 80, 67);
+}
+
+//Falling Leaves
+
+@if $theme_preset == 'fallingl' {
+$active_title: rgb(152, 40, 32);
+$background: rgb(230, 170, 98);
+$hilight: rgb(152, 40, 32);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(192, 192, 192);
+$inactive_title: rgb(232, 104, 0);
+$menu: rgb(192, 192, 192);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(192, 192, 192);
+$inactive_border: rgb(192, 192, 192);
+$app_workspace: rgb(205, 162, 82);
+$button_face: rgb(192, 192, 192);
+$button_shadow: rgb(128, 128, 128);
+$gray_text: rgb(128, 128, 128);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(255, 255, 255);
+$button_hilight: rgb(255, 255, 255);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(224, 224, 224);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 225);
+$gradient_active_title: rgb(240, 104, 64);
+$gradient_inactive_title: rgb(255, 192, 72);
+}
+
+//Fashion
+
+@if $theme_preset == 'fashion' {
+$active_title: rgb(112, 48, 48);
+$background: rgb(205, 186, 169);
+$hilight: rgb(200, 168, 152);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(192, 192, 192);
+$inactive_title: rgb(80, 80, 120);
+$menu: rgb(192, 192, 192);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(192, 192, 192);
+$inactive_border: rgb(192, 192, 192);
+$app_workspace: rgb(205, 162, 82);
+$button_face: rgb(192, 192, 192);
+$button_shadow: rgb(128, 128, 128);
+$gray_text: rgb(128, 128, 128);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(255, 255, 255);
+$button_hilight: rgb(255, 255, 255);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(224, 224, 224);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 225);
+$gradient_active_title: rgb(184, 104, 104);
+$gradient_inactive_title: rgb(152, 160, 192);
+}
+
+//Geometry
+
+@if $theme_preset == 'geometry' {
+$active_title: rgb(0, 0, 104);
+$background: rgb(0, 0, 94);
+$hilight: rgb(208, 184, 24);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(192, 192, 192);
+$inactive_title: rgb(0, 0, 0);
+$menu: rgb(192, 192, 192);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(192, 192, 192);
+$inactive_border: rgb(192, 192, 192);
+$app_workspace: rgb(205, 162, 82);
+$button_face: rgb(192, 192, 192);
+$button_shadow: rgb(128, 128, 128);
+$gray_text: rgb(128, 128, 128);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(255, 255, 255);
+$button_hilight: rgb(255, 255, 255);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(224, 224, 224);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 225);
+$gradient_active_title: rgb(0, 0, 208);
+$gradient_inactive_title: rgb(128, 128, 128);
+}
+
+//Horror
+
+@if $theme_preset == 'horror' {
+$active_title: rgb(72, 16, 112);
+$background: rgb(11, 45, 49);
+$hilight: rgb(80, 80, 64);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(192, 192, 192);
+$inactive_title: rgb(80, 76, 56);
+$menu: rgb(152, 168, 112);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(0, 0, 128);
+$inactive_border: rgb(0, 0, 128);
+$app_workspace: rgb(128, 128, 128);
+$button_face: rgb(152, 168, 112);
+$button_shadow: rgb(128, 128, 128);
+$gray_text: rgb(128, 128, 128);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(128, 128, 128);
+$button_hilight: rgb(255, 255, 255);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(224, 224, 224);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 225);
+$gradient_active_title: rgb(72, 16, 112);
+$gradient_inactive_title: rgb(80, 76, 56);
+}
+
+//Horses
+
+@if $theme_preset == 'horses' {
+$active_title: rgb(152, 104, 144);
+$background: rgb(155, 104, 121);
+$hilight: rgb(168, 128, 160);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(232, 216, 224);
+$inactive_title: rgb(176, 144, 176);
+$menu: rgb(208, 184, 192);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(208, 184, 192);
+$inactive_border: rgb(208, 184, 192);
+$app_workspace: rgb(155, 104, 121);
+$button_face: rgb(208, 184, 192);
+$button_shadow: rgb(152, 104, 120);
+$gray_text: rgb(152, 104, 120);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(128, 88, 120);
+$button_hilight: rgb(232, 216, 224);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(208, 184, 192);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 255);
+}
+
+//Inside your Computer
+
+@if $theme_preset == 'insidepc' {
+$active_title: rgb(224, 0, 0);
+$background: rgb(0, 0, 0);
+$hilight: rgb(248, 255, 160);
+$hilight_text: rgb(0, 0, 0);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(216, 224, 216);
+$inactive_title: rgb(96, 168, 128);
+$menu: rgb(168, 200, 168);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(168, 200, 168);
+$inactive_border: rgb(168, 200, 168);
+$app_workspace: rgb(80, 143, 108);
+$button_face: rgb(168, 200, 168);
+$button_shadow: rgb(96, 152, 96);
+$gray_text: rgb(96, 152, 96);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(216, 224, 216);
+$button_hilight: rgb(216, 224, 216);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(168, 200, 168);
+$info_text: rgb(0, 72, 72);
+$info_window: rgb(255, 239, 210);
+}
+
+//Jazz
+
+@if $theme_preset == 'jazz' {
+$active_title: rgb(128, 0, 0);
+$background: rgb(0, 0, 0);
+$hilight: rgb(128, 136, 160);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(192, 192, 192);
+$inactive_title: rgb(48, 48, 48);
+$menu: rgb(192, 192, 192);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(192, 192, 192);
+$inactive_border: rgb(192, 192, 192);
+$app_workspace: rgb(205, 162, 82);
+$button_face: rgb(192, 192, 192);
+$button_shadow: rgb(128, 128, 128);
+$gray_text: rgb(128, 128, 128);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(255, 255, 255);
+$button_hilight: rgb(255, 255, 255);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(224, 224, 224);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 225);
+$gradient_active_title: rgb(208, 0, 0);
+$gradient_inactive_title: rgb(128, 128, 128);
+}
+
+//Jungle
+
+@if $theme_preset == 'jungle' {
+$active_title: rgb(0, 0, 0);
+$background: rgb(0, 0, 0);
+$hilight: rgb(128, 0, 0);
+$hilight_text: rgb(240, 144, 16);
+$title_text: rgb(240, 144, 16);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(224, 208, 184);
+$inactive_title: rgb(128, 112, 64);
+$menu: rgb(184, 160, 104);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(184, 160, 104);
+$inactive_border: rgb(184, 160, 104);
+$app_workspace: rgb(130, 109, 62);
+$button_face: rgb(184, 160, 104);
+$button_shadow: rgb(128, 112, 64);
+$gray_text: rgb(128, 112, 64);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(128, 0, 0);
+$button_hilight: rgb(224, 208, 184);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(184, 160, 104);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 255);
+}
+
+//Leonardo da Vinci
+
+@if $theme_preset == 'ldavinci' {
+$active_title: rgb(128, 0, 0);
+$background: rgb(139, 101, 92);
+$hilight: rgb(128, 0, 0);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(223, 210, 208);
+$inactive_title: rgb(139, 101, 92);
+$menu: rgb(191, 165, 159);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(191, 165, 159);
+$inactive_border: rgb(191, 165, 159);
+$app_workspace: rgb(139, 101, 92);
+$button_face: rgb(191, 165, 159);
+$button_shadow: rgb(139, 101, 92);
+$gray_text: rgb(139, 101, 92);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(223, 210, 208);
+$button_hilight: rgb(223, 210, 208);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(191, 165, 159);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 255);
+}
+
+//Messy Room
+
+@if $theme_preset == 'messyrm' {
+$active_title: rgb(128, 0, 128);
+$background: rgb(72, 72, 168);
+$hilight: rgb(0, 255, 0);
+$hilight_text: rgb(0, 0, 0);
+$title_text: rgb(0, 255, 0);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(200, 200, 232);
+$inactive_title: rgb(72, 72, 168);
+$menu: rgb(144, 144, 208);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(144, 144, 208);
+$inactive_border: rgb(144, 144, 208);
+$app_workspace: rgb(70, 70, 164);
+$button_face: rgb(144, 144, 208);
+$button_shadow: rgb(72, 72, 168);
+$gray_text: rgb(72, 72, 168);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(128, 128, 208);
+$button_hilight: rgb(200, 200, 232);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(144, 144, 208);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 255);
+}
+
+//More Redmond
+
+@if $theme_preset == 'mrrdmond' {
+$active_title: rgb(0, 0, 0);
+$background: rgb(0, 0, 0);
+$hilight: rgb(240, 208, 48);
+$hilight_text: rgb(0, 0, 0);
+$title_text: rgb(240, 208, 48);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(200, 208, 208);
+$inactive_title: rgb(96, 104, 112);
+$menu: rgb(144, 152, 160);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(144, 152, 160);
+$inactive_border: rgb(144, 152, 160);
+$app_workspace: rgb(92, 101, 109);
+$button_face: rgb(144, 152, 160);
+$button_shadow: rgb(96, 104, 112);
+$gray_text: rgb(96, 104, 112);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(200, 200, 208);
+$button_hilight: rgb(200, 208, 208);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(144, 152, 160);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(240, 208, 48);
+}
+
+//Mystery
+
+@if $theme_preset == 'mystery' {
+$active_title: rgb(80, 56, 64);
+$background: rgb(0, 0, 0);
+$hilight: rgb(184, 120, 64);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 240);
+$window: rgb(255, 255, 240);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(176, 192, 176);
+$inactive_title: rgb(72, 80, 72);
+$menu: rgb(104, 120, 104);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(104, 120, 104);
+$inactive_border: rgb(104, 120, 104);
+$app_workspace: rgb(72, 80, 72);
+$button_face: rgb(104, 120, 104);
+$button_shadow: rgb(72, 80, 72);
+$gray_text: rgb(72, 80, 72);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(104, 120, 104);
+$button_hilight: rgb(176, 192, 176);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(104, 120, 104);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(206, 217, 206);
+}
+
+//Nature
+
+@if $theme_preset == 'nature' {
+$active_title: rgb(0, 72, 72);
+$background: rgb(0, 0, 0);
+$hilight: rgb(176, 144, 112);
+$hilight_text: rgb(0, 0, 0);
+$title_text: rgb(240, 232, 216);
+$window: rgb(240, 232, 216);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(240, 224, 208);
+$inactive_title: rgb(104, 80, 56);
+$menu: rgb(216, 192, 160);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(216, 192, 160);
+$inactive_border: rgb(216, 192, 160);
+$app_workspace: rgb(155, 119, 83);
+$button_face: rgb(216, 192, 160);
+$button_shadow: rgb(176, 136, 72);
+$gray_text: rgb(176, 136, 72);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(0, 0, 0);
+$button_hilight: rgb(240, 224, 208);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(216, 192, 160);
+$info_text: rgb(0, 72, 72);
+$info_window: rgb(255, 255, 255);
+}
+
+//Photography
+
+@if $theme_preset == 'phtgrphy' {
+$active_title: rgb(0, 0, 0);
+$background: rgb(0, 0, 0);
+$hilight: rgb(0, 0, 0);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(192, 192, 192);
+$inactive_title: rgb(128, 128, 128);
+$menu: rgb(192, 192, 192);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(192, 192, 192);
+$inactive_border: rgb(192, 192, 192);
+$app_workspace: rgb(128, 128, 128);
+$button_face: rgb(192, 192, 192);
+$button_shadow: rgb(128, 128, 128);
+$gray_text: rgb(128, 128, 128);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(192, 192, 192);
+$button_hilight: rgb(255, 255, 255);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(192, 192, 192);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 225);
+}
+
+//Redmond 9x
+
+@if $theme_preset == 'rdmond9x' {
+$active_title: rgb(16, 72, 112);
+$background: rgb(33, 146, 220);
+$hilight: rgb(224, 128, 24);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(192, 192, 192);
+$inactive_title: rgb(0, 64, 0);
+$menu: rgb(192, 192, 192);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(192, 192, 192);
+$inactive_border: rgb(192, 192, 192);
+$app_workspace: rgb(205, 162, 82);
+$button_face: rgb(192, 192, 192);
+$button_shadow: rgb(128, 128, 128);
+$gray_text: rgb(128, 128, 128);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(255, 255, 255);
+$button_hilight: rgb(255, 255, 255);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(224, 224, 224);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 225);
+$gradient_active_title: rgb(32, 144, 216);
+$gradient_inactive_title: rgb(0, 144, 0);
+}
+
+//Rock-n-Roll
+
+@if $theme_preset == 'rockroll' {
+$active_title: rgb(0, 0, 128);
+$background: rgb(241, 141, 41);
+$hilight: rgb(176, 16, 112);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(192, 192, 192);
+$inactive_title: rgb(208, 0, 0);
+$menu: rgb(192, 192, 192);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(192, 192, 192);
+$inactive_border: rgb(192, 192, 192);
+$app_workspace: rgb(205, 162, 82);
+$button_face: rgb(192, 192, 192);
+$button_shadow: rgb(128, 128, 128);
+$gray_text: rgb(128, 128, 128);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(255, 255, 255);
+$button_hilight: rgb(255, 255, 255);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(224, 224, 224);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 225);
+$gradient_active_title: rgb(192, 0, 96);
+$gradient_inactive_title: rgb(248, 152, 0);
+}
+
+//Science
+
+@if $theme_preset == 'science' {
+$active_title: rgb(0, 128, 128);
+$background: rgb(79, 101, 125);
+$hilight: rgb(0, 128, 128);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(193, 204, 217);
+$inactive_title: rgb(160, 160, 164);
+$menu: rgb(131, 153, 177);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(131, 153, 177);
+$inactive_border: rgb(131, 153, 177);
+$app_workspace: rgb(128, 128, 128);
+$button_face: rgb(131, 153, 177);
+$button_shadow: rgb(79, 101, 125);
+$gray_text: rgb(79, 101, 125);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(193, 204, 217);
+$button_hilight: rgb(193, 204, 217);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(131, 153, 177);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(193, 204, 217);
+}
+
+//Science Fiction
+
+@if $theme_preset == 'scifi' {
+$active_title: rgb(224, 72, 0);
+$background: rgb(128, 0, 64);
+$hilight: rgb(240, 184, 40);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(192, 192, 192);
+$inactive_title: rgb(120, 0, 64);
+$menu: rgb(192, 192, 192);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(192, 192, 192);
+$inactive_border: rgb(192, 192, 192);
+$app_workspace: rgb(205, 162, 82);
+$button_face: rgb(192, 192, 192);
+$button_shadow: rgb(128, 128, 128);
+$gray_text: rgb(128, 128, 128);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(255, 255, 255);
+$button_hilight: rgb(255, 255, 255);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(224, 224, 224);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 225);
+$gradient_active_title: rgb(232, 176, 0);
+$gradient_inactive_title: rgb(232, 40, 56);
+}
+
+//Snowboarding
+
+@if $theme_preset == 'snowbrd' {
+$active_title: rgb(40, 16, 64);
+$background: rgb(64, 0, 128);
+$hilight: rgb(128, 64, 64);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(248, 200, 96);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(184, 192, 144);
+$inactive_title: rgb(64, 72, 40);
+$menu: rgb(96, 104, 56);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(192, 192, 192);
+$active_border: rgb(96, 104, 56);
+$inactive_border: rgb(96, 104, 56);
+$app_workspace: rgb(63, 68, 36);
+$button_face: rgb(96, 104, 56);
+$button_shadow: rgb(64, 72, 40);
+$gray_text: rgb(64, 72, 40);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(192, 192, 192);
+$button_hilight: rgb(184, 192, 144);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(96, 104, 56);
+$info_text: rgb(255, 208, 112);
+$info_window: rgb(56, 64, 32);
+}
+
+//Space
+
+@if $theme_preset == 'space' {
+$active_title: rgb(0, 0, 0);
+$background: rgb(0, 0, 0);
+$hilight: rgb(0, 0, 0);
+$hilight_text: rgb(0, 255, 0);
+$title_text: rgb(0, 255, 0);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(192, 200, 208);
+$inactive_title: rgb(80, 96, 104);
+$menu: rgb(128, 144, 152);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(128, 144, 152);
+$inactive_border: rgb(128, 144, 152);
+$app_workspace: rgb(83, 96, 102);
+$button_face: rgb(128, 144, 152);
+$button_shadow: rgb(80, 96, 104);
+$gray_text: rgb(80, 96, 104);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(192, 192, 192);
+$button_hilight: rgb(192, 200, 208);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(128, 144, 152);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 255);
+}
+
+//Sports
+
+@if $theme_preset == 'sports' {
+$active_title: rgb(0, 128, 128);
+$background: rgb(0, 0, 0);
+$hilight: rgb(255, 255, 0);
+$hilight_text: rgb(0, 0, 0);
+$title_text: rgb(0, 0, 0);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 128, 0);
+$scrollbar: rgb(192, 192, 192);
+$inactive_title: rgb(0, 128, 0);
+$menu: rgb(176, 224, 160);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 128, 0);
+$active_border: rgb(176, 224, 160);
+$inactive_border: rgb(104, 184, 72);
+$app_workspace: rgb(216, 240, 208);
+$button_face: rgb(176, 224, 160);
+$button_shadow: rgb(104, 184, 72);
+$gray_text: rgb(104, 184, 72);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(176, 224, 160);
+$button_hilight: rgb(216, 240, 208);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(192, 192, 192);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 0);
+}
+
+//The 60's USA
+
+@if $theme_preset == 'the60usa' {
+$active_title: rgb(0, 0, 128);
+$background: rgb(160, 48, 168);
+$hilight: rgb(0, 255, 0);
+$hilight_text: rgb(0, 0, 0);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(232, 184, 240);
+$inactive_title: rgb(160, 48, 168);
+$menu: rgb(208, 104, 216);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(208, 104, 216);
+$inactive_border: rgb(208, 104, 216);
+$app_workspace: rgb(128, 0, 128);
+$button_face: rgb(208, 104, 216);
+$button_shadow: rgb(160, 48, 168);
+$gray_text: rgb(160, 48, 168);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(232, 184, 240);
+$button_hilight: rgb(232, 184, 240);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(208, 104, 216);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 0);
+}
+
+//The Golden Era
+
+@if $theme_preset == 'thgldner' {
+$active_title: rgb(216, 112, 96);
+$background: rgb(0, 0, 0);
+$hilight: rgb(128, 136, 168);
+$hilight_text: rgb(255, 248, 224);
+$title_text: rgb(255, 248, 224);
+$window: rgb(255, 248, 224);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(220, 228, 220);
+$inactive_title: rgb(112, 143, 112);
+$menu: rgb(184, 200, 184);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(184, 200, 184);
+$inactive_border: rgb(184, 200, 184);
+$app_workspace: rgb(112, 143, 112);
+$button_face: rgb(184, 200, 184);
+$button_shadow: rgb(112, 143, 112);
+$gray_text: rgb(112, 143, 112);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(0, 0, 0);
+$button_hilight: rgb(220, 228, 220);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(184, 200, 184);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 225);
+}
+
+//Travel
+
+@if $theme_preset == 'travel' {
+$active_title: rgb(64, 72, 120);
+$background: rgb(0, 0, 0);
+$hilight: rgb(72, 96, 80);
+$hilight_text: rgb(224, 224, 216);
+$title_text: rgb(224, 224, 216);
+$window: rgb(216, 208, 200);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(200, 192, 184);
+$inactive_title: rgb(96, 88, 72);
+$menu: rgb(144, 128, 112);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(144, 128, 112);
+$inactive_border: rgb(144, 128, 112);
+$app_workspace: rgb(95, 84, 73);
+$button_face: rgb(144, 128, 112);
+$button_shadow: rgb(96, 88, 72);
+$gray_text: rgb(96, 88, 72);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(144, 128, 112);
+$button_hilight: rgb(200, 192, 184);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(144, 128, 112);
+$info_text: rgb(64, 72, 120);
+$info_window: rgb(255, 255, 255);
+}
+
+//Tree House
+
+@if $theme_preset == 'treehse' {
+$active_title: rgb(192, 192, 192);
+$background: rgb(102, 114, 147);
+$hilight: rgb(200, 248, 168);
+$hilight_text: rgb(0, 0, 0);
+$title_text: rgb(0, 0, 0);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(200, 200, 208);
+$inactive_title: rgb(88, 88, 120);
+$menu: rgb(136, 136, 168);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(136, 136, 168);
+$inactive_border: rgb(136, 136, 168);
+$app_workspace: rgb(85, 85, 117);
+$button_face: rgb(136, 136, 168);
+$button_shadow: rgb(88, 88, 120);
+$gray_text: rgb(88, 88, 120);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(0, 0, 0);
+$button_hilight: rgb(200, 200, 208);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(136, 136, 168);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 255);
+}
+
+//Underwater
+
+@if $theme_preset == 'undrwtr' {
+$active_title: rgb(0, 0, 48);
+$background: rgb(40, 72, 128);
+$hilight: rgb(255, 192, 64);
+$hilight_text: rgb(0, 0, 0);
+$title_text: rgb(255, 192, 64);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(152, 176, 224);
+$inactive_title: rgb(40, 72, 128);
+$menu: rgb(56, 104, 200);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(56, 104, 200);
+$inactive_border: rgb(56, 104, 200);
+$app_workspace: rgb(37, 68, 131);
+$button_face: rgb(56, 104, 200);
+$button_shadow: rgb(40, 72, 128);
+$gray_text: rgb(40, 72, 128);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(168, 184, 216);
+$button_hilight: rgb(152, 176, 224);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(56, 104, 200);
+$info_text: rgb(128, 0, 128);
+$info_window: rgb(255, 255, 255);
+}
+
+//World Traveler
+
+@if $theme_preset == 'wotravel' {
+$active_title: rgb(72, 0, 88);
+$background: rgb(156, 198, 231);
+$hilight: rgb(120, 80, 224);
+$hilight_text: rgb(255, 255, 255);
+$title_text: rgb(255, 255, 255);
+$window: rgb(255, 255, 255);
+$window_text: rgb(0, 0, 0);
+$scrollbar: rgb(192, 192, 192);
+$inactive_title: rgb(0, 56, 112);
+$menu: rgb(192, 192, 192);
+$window_frame: rgb(0, 0, 0);
+$menu_text: rgb(0, 0, 0);
+$active_border: rgb(192, 192, 192);
+$inactive_border: rgb(192, 192, 192);
+$app_workspace: rgb(205, 162, 82);
+$button_face: rgb(192, 192, 192);
+$button_shadow: rgb(128, 128, 128);
+$gray_text: rgb(128, 128, 128);
+$button_text: rgb(0, 0, 0);
+$inactive_title_text: rgb(255, 255, 255);
+$button_hilight: rgb(255, 255, 255);
+$button_dk_shadow: rgb(0, 0, 0);
+$button_light: rgb(224, 224, 224);
+$info_text: rgb(0, 0, 0);
+$info_window: rgb(255, 255, 225);
+$gradient_active_title: rgb(112, 104, 232);
+$gradient_inactive_title: rgb(136, 176, 208);
+}
+// ******* END LIGHT THEME PRESET CHANGES *******
+// Taking care of optional variables
+
+$gradient_active_title: if($gradient_active_title == null, $active_title, $gradient_active_title);
+$gradient_inactive_title: if($gradient_inactive_title == null, $inactive_title, $gradient_inactive_title);
+$menu_hilight: if($menu_hilight == null, $hilight, $menu_hilight);
+$menu_bar: if($menu_bar == null, $button_face, $menu_bar);
+$hot_tracking_color: if($hot_tracking_color == null, #0000FF, $hot_tracking_color);
+
+// Hack for $button_borders, since yaru doesn't support multiple widget border colors
+$button_borders: mix(mix($button_light, $button_hilight, 50%), mix($button_shadow, $button_dk_shadow, 50%), 50%);
+
+// Hack for $gradient_active_title, since yaru doesn't support gradient color on headerbar
+$active_title: mix($active_title, $gradient_active_title, 50%);
+$gradient_active_title: $active_title;
+
+// Hack for $gradient_inactive_title, since yaru doesn't support gradient color on backdrop headerbar
+$inactive_title: mix($inactive_title, $gradient_inactive_title, 50%);
+$gradient_inactive_title: $inactive_title;
+
+// Main dark theme colors
+
+$active_title_dark: $active_title;
+$gradient_active_title_dark: $gradient_active_title;
+$background_dark: $background; //not implemented
+$menu_hilight_dark: $active_title; //orange in yaru
+$hilight_dark: $active_title;
+$hilight_text_dark: #FFFFFF;
+$title_text_dark: #FFFFFF;
+$window_dark: #000000;
+$window_text_dark: #FFFFFF;
+$scrollbar_dark: #1F1F1F;
+$inactive_title_dark: $inactive_title;
+$gradient_inactive_title_dark: $gradient_inactive_title;
+$menu_bar_dark: #1F1F1F;
+$menu_dark: $active_title;
+$window_frame_dark: #004D80;
+$menu_text_dark: #FFFFFF;
+$active_border_dark: #000000;
+$inactive_border_dark: #000000;
+$app_workspace_dark: #808080; //not implemented
+$button_face_dark: #1F1F1F;
+$button_shadow_dark: lighten($button_face_dark, 10%);
+$gray_text_dark: mix(#E6E6E6, #000, 50%);
+$button_text_dark: #FFFFFF;
+$inactive_title_text_dark: mix($title_text_dark, $inactive_title_dark, 70%);
+$button_hilight_dark: lighten($button_face_dark, 10%);
+$button_dk_shadow_dark: lighten($button_face_dark, 10%);
+$button_light_dark: lighten($button_face_dark, 10%);
+$info_text_dark: #FFFFFF;
+$info_window_dark: #1F1F1F;
+$hot_tracking_color_dark: lighten($hot_tracking_color, 10%);
+
+// ******* THE DARK THEME PRESET CHANGES *******
+
+// ******* END DARK THEME PRESET CHANGES *******
+
+// Hack for $button_borders_dark, since yaru doesn't support multiple widget border colors
+$button_borders_dark: mix(mix($button_light_dark, $button_hilight_dark, 50%), mix($button_shadow_dark, $button_dk_shadow_dark, 50%), 50%);
+
+// Hack for $gradient_active_title_dark, since yaru doesn't support gradient color on headerbar
+$active_title_dark: mix($active_title_dark, $gradient_active_title_dark, 50%);
+
+// Hack for $gradient_inactive_title_dark, since yaru doesn't support gradient color on backdrop headerbar
+$inactive_title_dark: mix($inactive_title_dark, $gradient_inactive_title_dark, 50%);
